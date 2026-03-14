@@ -128,13 +128,41 @@ Replace emoji placeholders with real images by:
 
 ## Deployment
 
-Build the project for production:
+### Important: Repo Link vs Live Site Link
+
+The GitHub repository link shows files/README, not your running Angular app.
+
+Use GitHub Pages URL for the live website:
+
+`https://SiphosethuMsengeni.github.io/MindsetCoaching/`
+
+### Build for GitHub Pages
+
+This project is configured with the correct production base path for GitHub Pages (`/MindsetCoaching/`).
 
 ```bash
 npm run build
 ```
 
-The build artifacts will be stored in the `dist/` directory.
+Build artifacts are generated in:
+
+`dist/mindset-coaching`
+
+### Publish to GitHub Pages
+
+1. Install deployment helper (one-time):
+
+```bash
+npm install --save-dev angular-cli-ghpages
+```
+
+2. Deploy:
+
+```bash
+npx angular-cli-ghpages --dir=dist/mindset-coaching
+```
+
+3. In GitHub repository settings, ensure Pages is enabled from branch `gh-pages`.
 
 ## License
 
