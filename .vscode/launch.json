@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Angular: Debug (npm start + Edge)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm start",
+      "serverReadyAction": {
+        "action": "debugWithEdge",
+        "pattern": "open your browser on (https?://\\S+)"
+      }
+    },
+    {
+      "name": "Angular: Launch Edge (server already running)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
